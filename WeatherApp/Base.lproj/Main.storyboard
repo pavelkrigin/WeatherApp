@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWS-Hp-teP">
-                                <rect key="frame" x="163" y="142" width="67" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWS-Hp-teP">
+                                <rect key="frame" x="181.33333333333334" y="142" width="30.666666666666657" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,6 +33,9 @@
                                 <rect key="frame" x="138" y="573" width="117" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get weather"/>
+                                <connections>
+                                    <action selector="getWeatherAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBc-Zf-kCR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,6 +49,10 @@
                             <constraint firstItem="EfY-C0-t3g" firstAttribute="top" secondItem="UWS-Hp-teP" secondAttribute="bottom" constant="108" id="vKb-Kr-xNe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getWeatherButton" destination="5vk-0y-bho" id="mgd-Nt-eIQ"/>
+                        <outlet property="weatherLabel" destination="UWS-Hp-teP" id="eJZ-HC-Qcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
