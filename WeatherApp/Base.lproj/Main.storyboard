@@ -22,20 +22,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EfY-C0-t3g">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Снимок экрана 2023-02-25 в 12.53.21" translatesAutoresizingMaskIntoConstraints="NO" id="EfY-C0-t3g">
                                 <rect key="frame" x="121.66666666666669" y="283" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="1In-Fs-6WO"/>
                                     <constraint firstAttribute="width" constant="150" id="EH8-lI-hf2"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-0y-bho">
+                                <rect key="frame" x="138" y="573" width="117" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Get weather"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EfY-C0-t3g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Hg-iX-UHk"/>
                             <constraint firstItem="UWS-Hp-teP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="ATQ-EZ-wEB"/>
+                            <constraint firstItem="5vk-0y-bho" firstAttribute="top" secondItem="EfY-C0-t3g" secondAttribute="bottom" constant="140" id="CES-ic-58L"/>
                             <constraint firstItem="UWS-Hp-teP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dr9-cB-gjH"/>
+                            <constraint firstItem="5vk-0y-bho" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mgu-SR-1I7"/>
                             <constraint firstItem="EfY-C0-t3g" firstAttribute="top" secondItem="UWS-Hp-teP" secondAttribute="bottom" constant="108" id="vKb-Kr-xNe"/>
                         </constraints>
                     </view>
@@ -46,6 +53,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Снимок экрана 2023-02-25 в 12.53.21" width="894" height="895"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
