@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWS-Hp-teP">
-                                <rect key="frame" x="181.33333333333334" y="142" width="30.666666666666657" height="33"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Снимок экрана 2023-02-25 в 12.53.21" translatesAutoresizingMaskIntoConstraints="NO" id="EfY-C0-t3g">
                                 <rect key="frame" x="121.66666666666669" y="283" width="150" height="150"/>
                                 <constraints>
@@ -30,26 +24,45 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vk-0y-bho">
-                                <rect key="frame" x="138" y="573" width="117" height="35"/>
+                                <rect key="frame" x="138" y="573" width="117" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Get weather"/>
                                 <connections>
                                     <action selector="getWeatherAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBc-Zf-kCR"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="mQj-8H-P37">
+                                <rect key="frame" x="0.0" y="97" width="393" height="76.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tc-MH-UZG">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWS-Hp-teP">
+                                        <rect key="frame" x="0.0" y="44.333333333333343" width="393" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="EfY-C0-t3g" firstAttribute="top" secondItem="mQj-8H-P37" secondAttribute="bottom" constant="109.33" id="3TR-OY-FJd"/>
                             <constraint firstItem="EfY-C0-t3g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4Hg-iX-UHk"/>
-                            <constraint firstItem="UWS-Hp-teP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="ATQ-EZ-wEB"/>
                             <constraint firstItem="5vk-0y-bho" firstAttribute="top" secondItem="EfY-C0-t3g" secondAttribute="bottom" constant="140" id="CES-ic-58L"/>
-                            <constraint firstItem="UWS-Hp-teP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dr9-cB-gjH"/>
+                            <constraint firstItem="mQj-8H-P37" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XuH-FZ-qzf"/>
+                            <constraint firstItem="mQj-8H-P37" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="m0q-2t-cys"/>
                             <constraint firstItem="5vk-0y-bho" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mgu-SR-1I7"/>
-                            <constraint firstItem="EfY-C0-t3g" firstAttribute="top" secondItem="UWS-Hp-teP" secondAttribute="bottom" constant="108" id="vKb-Kr-xNe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mQj-8H-P37" secondAttribute="trailing" id="s6I-nu-NaG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="country" destination="2tc-MH-UZG" id="Gyh-cc-jtt"/>
                         <outlet property="getWeatherButton" destination="5vk-0y-bho" id="mgd-Nt-eIQ"/>
                         <outlet property="weatherLabel" destination="UWS-Hp-teP" id="eJZ-HC-Qcb"/>
                     </connections>

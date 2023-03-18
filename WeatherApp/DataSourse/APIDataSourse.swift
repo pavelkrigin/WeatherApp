@@ -9,8 +9,9 @@ import Foundation
 
 final class APIDataSourse {
     
-    func getData(completion: @escaping (WeatherAPIModel?, String?) -> ()) {
-        guard let url = URL(string: Constants.shared.getBaseUrl()) else { // guard
+    func getData(location: (Double, Double),completion: @escaping (WeatherAPIModel?, String?) -> ()) {
+        
+        guard let url = URL(string: Constants.shared.getBaseUrl(location: location)) else { // guard
             DispatchQueue.main.async {
                 completion(nil, "URL Error")
             }

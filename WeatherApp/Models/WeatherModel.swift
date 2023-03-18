@@ -9,4 +9,7 @@ import Foundation
 
 struct WeatherModel {
     let temp: String
+    let country: String
 }
+
+

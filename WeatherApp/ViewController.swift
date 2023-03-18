@@ -18,6 +18,7 @@ final class ViewController: UIViewController, WeatherDelegate {
     @IBOutlet var weatherLabel: UILabel!
     @IBOutlet var getWeatherButton: UIButton!
     let activityIndicator = UIActivityIndicatorView()
+    @IBOutlet weak var country: UILabel!
     
     private let presenter = Presenter(dataSourse: APIDataSourse())
     
@@ -25,6 +26,7 @@ final class ViewController: UIViewController, WeatherDelegate {
         super.viewDidLoad()
         presenter.setViewDelegate(weatherViewDelegate: self)
         setUpActivityIndicator()
+                      
     }
     
     func setUpActivityIndicator() {
@@ -36,6 +38,7 @@ final class ViewController: UIViewController, WeatherDelegate {
     func displayWeatherData(model: WeatherModel) {
         self.weatherLabel.text = model.temp
         activityIndicator.stopAnimating()
+        self.country.text = model.country
     }
     
     func displayError(error: String) {
@@ -49,4 +52,5 @@ final class ViewController: UIViewController, WeatherDelegate {
         activityIndicator.startAnimating()
         presenter.getWeatherData()
     }
+
 }

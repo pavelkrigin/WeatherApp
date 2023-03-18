@@ -7,25 +7,27 @@
 
 import Foundation
 
-
-
 final class Presenter {
     
     private let dataSourse: APIDataSourse?
+    
+    let locationManager = LocationManager()
+    
     weak private var weatherDelegate: WeatherDelegate?
     
     func setViewDelegate(weatherViewDelegate: WeatherDelegate) {
-        
         weatherDelegate = weatherViewDelegate
+        locationManager.setUpLocationManager()
     }
     
     func mappingData(apiModel: WeatherAPIModel) -> WeatherModel {
-        return WeatherModel(temp: "\(apiModel.main.temp)˚")
-        
+        return WeatherModel(temp: "\(apiModel.main.temp)˚",
+                            country: apiModel.sys.country)
     }
     
     func getWeatherData() {
-        dataSourse?.getData(completion: { weatherAPIModel, error  in
+        
+        dataSourse?.getData(location: locationManager.location, completion: { weatherAPIModel, error  in
             
             if let weatherAPIModel = weatherAPIModel {
                 let viewModel = self.mappingData(apiModel: weatherAPIModel)
