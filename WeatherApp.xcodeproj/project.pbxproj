@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5E0A0429F9C41400F388E5 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5E0A0329F9C41400F388E5 /* Presenter.swift */; };
 		CA5F165C29C5EFAF00F001B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F165B29C5EFAF00F001B8 /* LocationManager.swift */; };
 		CAD6588E29B373A3000365E4 /* APIDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6588D29B373A3000365E4 /* APIDataSourse.swift */; };
-		CAD6589129B37482000365E4 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6589029B37482000365E4 /* Presenter.swift */; };
 		CAED590429AA291A009B3EE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED590329AA291A009B3EE2 /* AppDelegate.swift */; };
 		CAED590629AA291A009B3EE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED590529AA291A009B3EE2 /* SceneDelegate.swift */; };
 		CAED590829AA291A009B3EE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAED590729AA291A009B3EE2 /* ViewController.swift */; };
@@ -22,9 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA5E0A0329F9C41400F388E5 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		CA5F165B29C5EFAF00F001B8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CAD6588D29B373A3000365E4 /* APIDataSourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataSourse.swift; sourceTree = "<group>"; };
-		CAD6589029B37482000365E4 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		CAED590029AA291A009B3EE2 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAED590329AA291A009B3EE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAED590529AA291A009B3EE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA5E0A0229F9C3FB00F388E5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CA5E0A0329F9C41400F388E5 /* Presenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		CAD6588C29B37366000365E4 /* DataSourse */ = {
 			isa = PBXGroup;
 			children = (
@@ -56,14 +64,6 @@
 				CA5F165B29C5EFAF00F001B8 /* LocationManager.swift */,
 			);
 			path = DataSourse;
-			sourceTree = "<group>";
-		};
-		CAD6588F29B37470000365E4 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CAD6589029B37482000365E4 /* Presenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CAED58F729AA291A009B3EE2 = {
@@ -85,7 +85,7 @@
 		CAED590229AA291A009B3EE2 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				CAD6588F29B37470000365E4 /* Presenter */,
+				CA5E0A0229F9C3FB00F388E5 /* Presenter */,
 				CAD6588C29B37366000365E4 /* DataSourse */,
 				CAED591E29AA8BBB009B3EE2 /* Sourse */,
 				CAED591B29AA443D009B3EE2 /* Models */,
@@ -188,9 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5E0A0429F9C41400F388E5 /* Presenter.swift in Sources */,
 				CAED590829AA291A009B3EE2 /* ViewController.swift in Sources */,
 				CAED590429AA291A009B3EE2 /* AppDelegate.swift in Sources */,
-				CAD6589129B37482000365E4 /* Presenter.swift in Sources */,
 				CAD6588E29B373A3000365E4 /* APIDataSourse.swift in Sources */,
 				CAED590629AA291A009B3EE2 /* SceneDelegate.swift in Sources */,
 				CAED591A29AA4438009B3EE2 /* WeatherAPIModel.swift in Sources */,
